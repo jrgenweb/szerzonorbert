@@ -1,0 +1,186 @@
+/*
+some styles
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+$color1: #07ffff;
+$black: #141204;
+$white: #f6e4f6;
+$yellow: #e7e247;
+
+$red: #f05365;
+.header {
+    background: linear-gradient(
+        0deg,
+        rgb(0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 5%,
+        rgba(0, 0, 0, 0.515) 20%,
+        rgba(0, 0, 0, 0.496) 30%,
+        rgba(0, 0, 0, 0.495) 60%,
+        rgba(0, 0, 0, 0.547) 80%,
+        rgba(0, 0, 0, 1) 95%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    /*,
+        url("../img/header.jpg");
+    background-repeat: unset, no-repeat;
+    background-size: contain, cover;
+    background-position: 0, 0px;
+    background-attachment: scroll, fixed;*/
+    height: 100vh;
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+.video-bg {
+    position: fixed;
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+h2,
+h3,
+p {
+    color: #fff;
+}
+h1 {
+    font-weight: bold;
+    font-family: "Madimi One";
+    color: $color1;
+}
+.navbar {
+    font-family: "Bebas Neue";
+    font-size: 1.4rem;
+    .nav-link {
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+        &:hover,
+        &:active {
+            background-color: $color1;
+
+            color: #000;
+        }
+    }
+    .navbar-collapse {
+        .navbar-nav {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+    }
+}
+
+.footer {
+    color: #fff;
+    a {
+        color: #fff;
+    }
+}
+.social {
+    justify-content: center;
+    .nav-link {
+        color: $color1;
+        font-size: 2rem;
+        border: 1px solid $color1;
+        border-radius: 10px;
+        margin: 1rem;
+        &:hover {
+            background-color: lighten($color1, 10%);
+            color: #fff;
+        }
+    }
+}
+
+.contact,
+.about,
+.programs {
+    min-height: 100vh;
+    background-color: #000;
+}
+.footer {
+    background-color: #000;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    font-family: "Bebas Neue";
+    .btn.btn-primary {
+        background-color: $color1;
+        border: 0;
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-radius: 10px;
+        color: #000;
+        &:hover {
+            color: lighten(#000, 20%);
+            background-color: lighten($color1, 25%);
+        }
+    }
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        text-align: center;
+    }
+}
+
+.card {
+    overflow: hidden;
+
+    .card-body {
+        width: 100%;
+        position: relative;
+    }
+}
+
+.programs {
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        text-align: center;
+    }
+    .image {
+        width: 100%;
+        height: 100%;
+        max-height: 60vh;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .video {
+        width: 2000px;
+        position: relative;
+        left: -700px;
+        top: 0;
+    }
+
+    .text:first-child {
+        border-left: 10px solid $yellow;
+    }
+    .text:nth-child(2) {
+        border-right: 10px solid $color1;
+    }
+}
